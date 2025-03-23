@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rituals x Energy Dinks</title>
+    <link rel="icon" type="image/png" href="/images/Favicon.png">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="ObererHeader">
+            <h1 id="RabattCall">Gratis Versand ab 35 €</h1>
+            <h2 id="Lieferzeit">Lieferzeit 1 - 4 Werktage</h2>
+        </div>
+        <section class="Menue">
+            <div class="burger-icon"></div> <!-- Burger-Icon -->
+            <a href="#" class="sakuraya-logo"></a>
+            <div class="profil-icon"></div>
+            <div class="einkauf-icon"></div>
+        </section>
+    </header>
+
+     <!-- Seitenmenü -->
+     <nav id="side-menu">
+        <ul>
+            <li><a href="#">HOME</a></li>
+            <li><a href="#">LIMITED EDITION</a></li>
+            <li><a href="#">NEU</a></li>
+            <li><a href="#">BESTSELLER</a></li>
+            <li><a href="#">KONTAKT</a></li>
+        </ul>
+    </nav>
+
+    <section class="StartScreen">
+        <div class="slideshow-container">
+            <div class="slide fade active" style="background-image: url('/images/Firefly\ 3\ energy\ drink\ dosen\,\ Beige\ Hintergrund.png');"></div>
+            <div class="slide fade" style="background-image: url('/images/Firefly\ energy\ drink\ dose\,\ Kirschblüten\ im\ Hintergrund\,\ Kirschblütenmuster\ auf\ der\ dose\,\ göttlich.png');"></div>
+            <div class="slide fade" style="background-image: url('/images/Firefly\ energy\ drink\ dose\,\ Salbei\ und\ edler\ Schwertlilie\ Hintergrund\,\ Schwertlilienmuster.png');"></div>
+            <div class="slide fade" style="background-image: url('/images/Firefly\ energy\ drink\ dose\,\ Orangenbaum\ Hintergrund\,\ Orangenmuster.png');"></div>
+
+            <!-- Buttons -->
+            <div class="button-box">
+                <div class="button-container">
+                    <button class="start-btn left">Limited Edition</button>
+                    <button class="start-btn center">Neu</button>
+                    <button class="start-btn right">Bestseller</button>
+                </div>
+            </div>
+    
+            <!-- Pfeile -->
+            <div class="prev" onclick="changeSlide(-1)">
+                <img src="/images/next-svgrepo-com.svg" class="prev-icon">
+            </div>
+            <div class="next" onclick="changeSlide(1)">
+                <img src="/images/next-svgrepo-com.svg" class="next-icon">
+            </div>
+    
+            <!-- Dots -->
+            <div class="dots-container">
+                <span class="dot active" onclick="goToSlide(0)"></span>
+                <span class="dot" onclick="goToSlide(1)"></span>
+                <span class="dot" onclick="goToSlide(2)"></span>
+                <span class="dot" onclick="goToSlide(3)"></span>
+            </div>
+        </div>
+    </section>
+<script src="/script.js"></script>    
+</body>
+</html>

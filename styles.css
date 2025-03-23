@@ -1,0 +1,373 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: white;
+
+}
+
+/*------------ HEADER OBEN MIT RABATT UND LIEFERZEIT ------------*/
+.ObererHeader {
+    top: 0px;
+    left: 0px;
+    height: 34px;
+    background: #242222 0% 0% no-repeat padding-box;
+    opacity: 1;
+    position: relative; /* Wichtiger Punkt für die genaue Positionierung */
+    z-index: 200;
+}
+
+#RabattCall,
+#Lieferzeit {
+    position: absolute; /* Positioniert die Elemente exakt an der gleichen Stelle */
+    top: 50%; /* Setzt beide in der Mitte des Containers */
+    left: 50%;
+    transform: translate(-50%, -50%); /* Zentriert sie sowohl horizontal als auch vertikal */
+    text-align: center;
+    font: normal normal normal 12px/16px Segoe UI;
+    letter-spacing: 0px;
+    color: #FFFFFF;
+    opacity: 0; /* Unsichtbar zu Beginn */
+    visibility: hidden; /* Unsichtbar */
+    transition: opacity 2s, visibility 2s; /* Übergang für die Sichtbarkeit */
+}
+
+#RabattCall.show,
+#Lieferzeit.show {
+    opacity: 1; /* Sichtbar */
+    visibility: visible; /* Sichtbar */
+    transition: opacity 2s, visibility 2s; /* Übergang für die Sichtbarkeit */
+}
+
+/*------------ MAIN HEADER ------------*/
+
+.Menue {
+    background: #1A1919 0% 0% no-repeat padding-box;
+    height: 66px;
+    opacity: 1;
+    position: relative;
+    padding: 0 16px;
+    z-index: 200; /* Hinzugefügt: Menue hat jetzt den höchsten z-index */
+}
+
+/* Burger-Icon links mit 16px Abstand und vertikal mittig */
+.Menue .burger-icon {
+    height: 50px;
+    width: 50px;
+    background-image: url('/images/burger-advanced-svgrepo-com.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 1;
+    position: absolute;
+    left: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* Einkaufswagen-Icon ganz rechts mit 16px Abstand und vertikal mittig */
+.Menue .einkauf-icon {
+    height: 40px;
+    width: 40px;
+    background-image: url('/images/bag-shopping-svgrepo-com.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 1;
+    position: absolute;
+    right: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* Profil-Icon wird links neben dem Einkaufswagen-Icon positioniert */
+.Menue .profil-icon {
+    height: 40px;
+    width: 40px;
+    background-image: url('/images/user-circle-svgrepo-com.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 1;
+    position: absolute;
+    right: 72px; /* 16px Abstand vom Einkaufswagen (40px + 16px) */
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+
+/* Sakuraya-Logo mittig fixieren */
+.Menue .sakuraya-logo {
+    height: 25px;
+    width: 200px;
+    background-image: url('/images/SakurayaLogo.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 1;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    margin-left: -15px;
+}
+
+/* Burger-Icon nur anzeigen, wenn der Bildschirm kleiner als 1024px ist */
+@media (max-width: 1024px) {
+    .burger-icon {
+        display: block;
+    }
+}
+
+@media (min-width: 1025px) {
+    /* Burger-Icon ausblenden, wenn der Bildschirm größer als 1024px ist */
+    .burger-icon {
+        display: none;
+    }
+
+    /* Standardmenü anzeigen */
+    #side-menu {
+        display: none;
+    }
+}
+
+/* Das Seitenmenü - standardmäßig unsichtbar */
+#side-menu {
+    position: fixed;
+    top: 100px;  /* Startposition direkt unter dem Header */
+    left: 0;
+    width: 100%;
+    height: 100%; /* Höhe des gesamten Bildschirms */
+    background-color: #242222;
+    transform: translateY(-100%); /* Menü ist standardmäßig außerhalb des Bildschirms (nach oben verschoben) */
+    transition: transform 0.3s ease-in-out;
+    z-index: 99; /* Standard z-index */
+    padding-top: 50px;
+}
+
+/* Anfangszustand der Menü-Punkte */
+#side-menu a {
+    opacity: 0;
+    transform: translateY(-20px); /* Menü-Punkte starten leicht nach oben verschoben */
+    transition: opacity 0.5s, transform 0.5s;
+}
+
+/* Die Links im Menü */
+#side-menu ul {
+    list-style-type: none;
+    text-align: center;
+}
+
+#side-menu ul li {
+    padding: 30px 0;
+    
+}
+
+/* Standardzustand: Menü-Punkte sind unsichtbar */
+#side-menu ul li a {
+    color: white;
+    text-decoration: none;
+    font: normal normal 600 30px/40px Segoe UI;
+    text-transform: uppercase; /* Optional: Alle Buchstaben in Großbuchstaben */
+    display: block;
+    padding: 10px 0;
+    opacity: 0; /* Anfangs unsichtbar */
+    transform: translateY(-20px); /* Beginnt leicht nach oben verschoben */
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out; /* Übergänge */
+}
+
+/* Die Links im Menü erscheinen, wenn das Menü geöffnet wird */
+#side-menu.open ul li a {
+    opacity: 1; /* Sichtbar */
+    transform: translateY(0); /* Zur normalen Position verschieben */
+}
+
+/* @keyframes-Animation für das Einblenden */
+@keyframes fadeIn {
+    0% {
+        opacity: 0; /* Anfangszustand: Unsichtbar */
+        transform: translateY(-20px); /* Beginnt leicht nach oben verschoben */
+    }
+    100% {
+        opacity: 1; /* Endzustand: Voll sichtbar */
+        transform: translateY(0); /* Normaler Zustand */
+    }
+}
+
+/* Verzögerung hinzufügen für jeden Menüpunkt */
+#side-menu.open ul li:nth-child(1) a {
+    animation: fadeIn 0.5s ease-out forwards;
+    animation-delay: 0.2s; /* Verzögerung für "Home" */
+}
+
+#side-menu.open ul li:nth-child(2) a {
+    animation: fadeIn 0.5s ease-out forwards;
+    animation-delay: 0.4s; /* Verzögerung für "Limited Edition" */
+}
+
+#side-menu.open ul li:nth-child(3) a {
+    animation: fadeIn 0.5s ease-out forwards;
+    animation-delay: 0.6s; /* Verzögerung für "Neu" */
+}
+
+#side-menu.open ul li:nth-child(4) a {
+    animation: fadeIn 0.5s ease-out forwards;
+    animation-delay: 0.8s; /* Verzögerung für "Bestseller" */
+}
+
+#side-menu.open ul li:nth-child(5) a {
+    animation: fadeIn 0.5s ease-out forwards;
+    animation-delay: 1s; /* Verzögerung für "Kontakt" */
+}
+
+
+/* Optional: Hover-Effekt für die Links */
+#side-menu ul li a:hover {
+    color: #f0f0f0;
+}
+
+/* Burger-Icon und X-Icon */
+.burger-icon {
+    height: 50px;
+    width: 50px;
+    background-image: url('/images/burger-advanced-svgrepo-com.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+
+/* Stil für das Burger-Icon, wenn das Menü geöffnet ist (Ändert das Icon zu X) */
+.burger-icon.open {
+    background-image: url('/images/xmark-svgrepo-com.svg');
+}
+
+/* Übergangseffekte */
+/* Stil für das Menü, wenn es geöffnet ist */
+#side-menu.open {
+    transform: translateY(0); /* Menü kommt von oben nach unten ins Sichtfeld */
+    z-index: 100; /* Menü wird über alles andere gelegt */
+}
+
+/*------------ BILDER KARUSSELL1 ------------*/
+
+/* Grundlayout */
+.StartScreen {
+    width: 100%;
+    height: 512px; /* Anpassbar */
+    position: relative;
+    overflow: hidden;
+}
+
+.slideshow-container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+/* Slides */
+.slide {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+.slide.active {
+    opacity: 1;
+}
+
+/* Pfeile */
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    
+}
+
+.prev { left: 16px; }
+.next { right: 16px; }
+
+.prev-icon {
+    width: 100%;
+    opacity: 0.7;
+    transform: scaleX(-1); /* Spiegelt den Pfeil für "prev" */
+}
+
+.next-icon {
+    width: 100%;
+    opacity: 0.7;
+}
+
+/* Dots */
+.dots-container {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+}
+
+.dot {
+    width: 6px;
+    height: 6px;
+    background: rgba(24, 22, 22, 0.3);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.dot.active {
+    background: white;
+}
+
+
+/*------------ TEXT UND BUTTONS ÜBER BILDER KARUSSELL1 ------------*/
+
+/* Box, die die Buttons enthält und in der Mitte oben positioniert ist */
+.button-box {
+    position: absolute;
+    top: 10px; /* Abstand vom oberen Rand der Section */
+    left: 50%;
+    transform: translateX(-50%); /* Horizontale Zentrierung */
+    width: auto;
+    padding: 0 16px; /* Sicherstellung, dass die Buttons nicht aus dem Bildschirm ragen */
+    z-index: 2;
+}
+
+/* Buttons Container */
+.button-container {
+    display: flex;
+    align-items: center; /* Vertikale Zentrierung der Buttons */
+    gap: 16px; /* Abstand von 10px zwischen den Buttons */
+    justify-content: center; /* Zentriert die Buttons innerhalb der Box */
+}
+
+/* Start Button */
+.start-btn {
+    background-color: rgba(36, 34, 34, 0.6); /* #242222 mit Transparenz */
+    color: white;
+    border: none;
+    border-radius: 30px;
+    height: 32px; /* Höhe der Buttons */
+    width: 110px; /* Breite der Buttons */
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Vertikale Zentrierung des Textes */
+}
+
+/* Hover-Effekt für Buttons */
+.start-btn:hover {
+    background-color: rgba(36, 34, 34, 1); /* Volle Deckkraft beim Hover */
+    transform: scale(1.05);
+}
+
+
