@@ -110,7 +110,7 @@ body {
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    margin-left: -15px;
+    margin-left: px;
 }
 
 /* Burger-Icon nur anzeigen, wenn der Bildschirm kleiner als 1024px ist */
