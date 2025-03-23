@@ -2,11 +2,12 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    
 }
 
 body {
     background: white;
-
+    
 }
 
 /*------------ HEADER OBEN MIT RABATT UND LIEFERZEIT ------------*/
@@ -17,7 +18,7 @@ body {
     background: #242222 0% 0% no-repeat padding-box;
     opacity: 1;
     position: relative; /* Wichtiger Punkt für die genaue Positionierung */
-    z-index: 200;
+    z-index: 201;
 }
 
 #RabattCall,
@@ -27,7 +28,7 @@ body {
     left: 50%;
     transform: translate(-50%, -50%); /* Zentriert sie sowohl horizontal als auch vertikal */
     text-align: center;
-    font: normal normal normal 12px/16px Segoe UI;
+    font: normal normal normal 12px/16px "Roboto", sans-serif;
     letter-spacing: 0px;
     color: #FFFFFF;
     opacity: 0; /* Unsichtbar zu Beginn */
@@ -51,6 +52,7 @@ body {
     position: relative;
     padding: 0 16px;
     z-index: 200; /* Hinzugefügt: Menue hat jetzt den höchsten z-index */
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.4);
 }
 
 /* Burger-Icon links mit 16px Abstand und vertikal mittig */
@@ -166,7 +168,7 @@ body {
 #side-menu ul li a {
     color: white;
     text-decoration: none;
-    font: normal normal 600 30px/40px Segoe UI;
+    font: normal normal normal 18px/16px "Roboto", sans-serif;
     text-transform: uppercase; /* Optional: Alle Buchstaben in Großbuchstaben */
     display: block;
     padding: 10px 0;
@@ -255,6 +257,8 @@ body {
     height: 512px; /* Anpassbar */
     position: relative;
     overflow: hidden;
+    box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.5);
+    
 }
 
 .slideshow-container {
@@ -272,10 +276,51 @@ body {
     background-position: center;
     opacity: 0;
     transition: opacity 1s ease-in-out;
+    display: flex;
+    flex-direction: column; /* Setzt die Reihenfolge von h1 und h2 in eine Spaltenrichtung */
+    justify-content: center; /* Zentriert den Inhalt vertikal */
+    align-items: center; /* Zentriert den Inhalt horizontal */
+    text-align: center;
 }
+
+/* Overlay */
+.overlay {
+    position: absolute;  /* Positionierung über dem Bild */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);  /* Schwarzer Hintergrund mit 50% Transparenz */
+    z-index: 1;  /* Overlay hat einen z-index von 1 */
+}
+
+/* Sichtbar machen des aktiven Slides */
 .slide.active {
     opacity: 1;
 }
+
+/* Stil für h1 */
+.slide h1 {
+    color: white;
+    font-size: 12px;  /* Größere Schriftgröße, anpassbar */
+    font-weight: bold;
+    margin: 0px;  /* Entfernt die Standardabstände */
+    padding: 0;  /* Entfernt die Standardabstände */
+    z-index: 2;  /* Text wird über dem Overlay angezeigt */
+}
+
+/* Stil für h2 */
+.slide h2 {
+    color: white;
+    font-size: 32px;  /* Anpassen je nach Bedarf */
+    font-weight: bold;
+    margin: 0px;  /* Entfernt die Standardabstände */
+    padding: 0;  /* Entfernt die Standardabstände */
+    word-break: break-word;
+    width: 250px;
+    z-index: 2;  /* Text wird über dem Overlay angezeigt */
+}
+
 
 /* Pfeile */
 .prev, .next {
@@ -285,6 +330,7 @@ body {
     width: 40px;
     height: 40px;
     cursor: pointer;
+    z-index: 2;  /* Text wird über dem Overlay angezeigt */
     
 }
 
@@ -293,13 +339,15 @@ body {
 
 .prev-icon {
     width: 100%;
-    opacity: 0.7;
+    opacity: 0.9;
     transform: scaleX(-1); /* Spiegelt den Pfeil für "prev" */
+    z-index: 2;  /* Text wird über dem Overlay angezeigt */
 }
 
 .next-icon {
     width: 100%;
-    opacity: 0.7;
+    opacity: 0.9;
+    z-index: 2;  /* Text wird über dem Overlay angezeigt */
 }
 
 /* Dots */
@@ -310,19 +358,22 @@ body {
     transform: translateX(-50%);
     display: flex;
     gap: 10px;
+    z-index: 2;  /* Text wird über dem Overlay angezeigt */
 }
 
 .dot {
     width: 6px;
     height: 6px;
-    background: rgba(24, 22, 22, 0.3);
+    background: rgba(255, 255, 255, 0.3);
     border-radius: 50%;
     cursor: pointer;
     transition: background 0.3s;
+    z-index: 2;  /* Text wird über dem Overlay angezeigt */
 }
 
 .dot.active {
     background: white;
+    z-index: 2;  /* Text wird über dem Overlay angezeigt */
 }
 
 
@@ -354,7 +405,7 @@ body {
     border: none;
     border-radius: 30px;
     height: 32px; /* Höhe der Buttons */
-    width: 110px; /* Breite der Buttons */
+    width: 120px; /* Breite der Buttons */
     font-size: 14px;
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.3s ease;
@@ -370,4 +421,39 @@ body {
     transform: scale(1.05);
 }
 
+/* Container für den Button */
+.StartScreenTextButton {
+    position: absolute;
+    bottom: 60px; /* Abstand vom oberen Rand (anpassbar) */
+    left: 50%;
+    transform: translateX(-50%); /* Exakte horizontale Zentrierung */
+    box-shadow: 0px 0px 60px rgba(0, 0, 0, 0.4);
+    z-index: 2;
+}
+
+/* Styling für den "JETZT ENTDECKEN"-Button */
+.startscreen-btn {
+    font-family: "Roboto", sans-serif;
+    background-color: rgba(255, 255, 255, 0.95); /* Weißer Hintergrund */
+    color: #1A1919; /* Dunkle Schriftfarbe */
+    border: none;
+    border-radius: 0px; /* Viereckig */
+    height: 50px; /* Höhe */
+    width: 192px; /* Breite */
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Vertikale Zentrierung */
+}
+
+/* Hover-Effekt für den "JETZT ENTDECKEN"-Button */
+.startscreen-btn:hover {
+    background-color: rgba(36, 34, 34, 0.95); /* Hintergrund wird dunkel */
+    color: #FFFFFF; /* Schriftfarbe wird weiß */
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.6);
+}
 
