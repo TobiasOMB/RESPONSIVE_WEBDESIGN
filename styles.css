@@ -424,7 +424,7 @@ body {
 /* Container für den Button */
 .StartScreenTextButton {
     position: absolute;
-    bottom: 60px; /* Abstand vom oberen Rand (anpassbar) */
+    bottom: 120px; /* Abstand vom oberen Rand (anpassbar) */
     left: 50%;
     transform: translateX(-50%); /* Exakte horizontale Zentrierung */
     box-shadow: 0px 0px 60px rgba(0, 0, 0, 0.4);
