@@ -66,7 +66,7 @@ body {
 .Menue .burger-icon {
     height: 50px;
     width: 50px;
-    background-image: url('/images/burger-advanced-svgrepo-com.svg');
+    background-image: url('images/burger-advanced-svgrepo-com.svg');
     background-size: contain;
     background-repeat: no-repeat;
     opacity: 1;
@@ -80,7 +80,7 @@ body {
 .Menue .einkauf-icon {
     height: 30px;
     width: 30px;
-    background-image: url('/images/bag-shopping-svgrepo-com.svg');
+    background-image: url('images/bag-shopping-svgrepo-com.svg');
     background-size: contain;
     background-repeat: no-repeat;
     opacity: 1;
@@ -94,7 +94,7 @@ body {
 .Menue .profil-icon {
     height: 30px;
     width: 30px;
-    background-image: url('/images/user-circle-svgrepo-com.svg');
+    background-image: url('images/user-circle-svgrepo-com.svg');
     background-size: contain;
     background-repeat: no-repeat;
     opacity: 1;
@@ -109,7 +109,7 @@ body {
 .Menue .sakuraya-logo {
     height: 25px;
     width: 200px;
-    background-image: url('/images/SakurayaLogo.svg');
+    background-image: url('images/SakurayaLogo.svg');
     background-size: contain;
     background-repeat: no-repeat;
     opacity: 1;
@@ -238,7 +238,7 @@ body {
 .burger-icon {
     height: 50px;
     width: 50px;
-    background-image: url('/images/burger-advanced-svgrepo-com.svg');
+    background-image: url('images/burger-advanced-svgrepo-com.svg');
     background-size: contain;
     background-repeat: no-repeat;
     cursor: pointer;
@@ -246,7 +246,7 @@ body {
 
 /* Stil für das Burger-Icon, wenn das Menü geöffnet ist (Ändert das Icon zu X) */
 .burger-icon.open {
-    background-image: url('/images/xmark-svgrepo-com.svg');
+    background-image: url('images/xmark-svgrepo-com.svg');
 }
 
 /* Übergangseffekte */
@@ -745,7 +745,7 @@ body {
     .LEBild {
         width: 100%;
         height: 100%;
-        content: url('/images/Firefly\ 3\ energy\ drink\ dosen\,\ Beige\ Hintergrund.png');
+        content: url('images/Firefly\ 3\ energy\ drink\ dosen\,\ Beige\ Hintergrund.png');
         
     }
 }
@@ -800,7 +800,7 @@ body {
 .LEWarenkorb {
     width: 24px;
     height: 24px;
-    background-image: url('/images/cart-plus-svgrepo-com.svg');
+    background-image: url('images/cart-plus-svgrepo-com.svg');
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
