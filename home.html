@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sakuraya Zenergy</title>
+    <link rel="icon" type="image/png" href="/images/Favicon.png">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <header>
+        <div class="ObererHeader">
+            <h1 id="RabattCall">Gratis Versand ab 35 €</h1>
+            <h2 id="Lieferzeit">Lieferzeit 1 - 4 Werktage</h2>
+        </div>
+        <section class="Menue">
+            <div class="burger-icon"></div> <!-- Burger-Icon -->
+            <a href="#" class="sakuraya-logo"></a>
+            <div class="profil-icon"></div>
+            <div class="einkauf-icon"></div>
+        </section>
+    </header>
+
+     <!-- Seitenmenü -->
+     <nav id="side-menu">
+        <ul>
+            <li><a href="#">HOME</a></li>
+            <li><a href="#Neu">NEUHEITEN</a></li>
+            <li><a href="#LEBereich">LIMITED EDITION</a></li>
+            <li><a href="#BSellerID">BESTSELLER</a></li>
+            <li><a href="#KontaktID">KONTAKT</a></li>
+        </ul>
+    </nav>
+
+    <section class="StartScreen">
+        <div class="slideshow-container">
+                <div class="slide fade active" style="background-image: url('/images/Firefly\ 3\ energy\ drink\ dosen\,\ Beige\ Hintergrund.png');">
+                    <div class="overlay"></div>
+                    <h1>THE DREAM COLLECTION</h1>
+                    <h2>Neue Limited Edition</h2>
+                </div>
+                <div class="slide fade" style="background-image: url('/images/Firefly\ energy\ drink\ dose\,\ Kirschblüten\ im\ Hintergrund\,\ Kirschblütenmuster\ auf\ der\ dose\,\ göttlich.png');">
+                    <div class="overlay"></div>
+                    <h1>JAPANISCHE KIRSCHBLÜTE</h1>
+                    <h2>Zahrt und belebend</h2>
+                </div>
+                <div class="slide fade" style="background-image: url('/images/Firefly\ energy\ drink\ dose\,\ Salbei\ und\ edler\ Schwertlilie\ Hintergrund\,\ Schwertlilienmuster.png');">
+                    <div class="overlay"></div>
+                    <h1>SALBEI & SCHWERTLILIE</h1>
+                    <h2>Florale Eleganz und kräutrige Frische</h2>
+                </div>
+                <div class="slide fade" style="background-image: url('/images/Firefly\ energy\ drink\ dose\,\ Orangenbaum\ Hintergrund\,\ Orangenmuster.png');">
+                    <div class="overlay"></div>
+                    <h1>CHINESISCHE ORANGE</h1>
+                    <h2>Fruchtig, belebend und exotisch</h2>
+                </div>
+
+            <!-- Buttons -->
+            <div class="button-box">
+                <div class="button-container">
+                    <a href="#LEBereich" class="start-btn left">Limited Edition</a>
+                    <a href="#Neu" class="start-btn center">Neu</a>
+                    <a href="#BSellerID" class="start-btn right">Bestseller</a>
+                </div>
+            </div>
+
+            <div class="StartScreenTextButton">
+                <button class="startscreen-btn center">JETZT ENTDECKEN</button>
+            </div>
+    
+            <!-- Pfeile -->
+            <div class="prev" onclick="changeSlide(-1)">
+                <img src="/images/next-svgrepo-com.svg" class="prev-icon">
+            </div>
+            <div class="next" onclick="changeSlide(1)">
+                <img src="/images/next-svgrepo-com.svg" class="next-icon">
+            </div>
+    
+            <!-- Dots -->
+            <div class="dots-container">
+                <span class="dot active" onclick="goToSlide(0)"></span>
+                <span class="dot" onclick="goToSlide(1)"></span>
+                <span class="dot" onclick="goToSlide(2)"></span>
+                <span class="dot" onclick="goToSlide(3)"></span>
+            </div>
+        </div>
+    </section>
+
+    <section id="Neu" class="Neuheiten">
+        <div class="Neuheiten-Textbereich">
+            <p class="Neuheiten-Klein">NEUHEITEN</p>
+            <h2 class="Neuheiten-Groß">The Dream Collection</h2>
+            <p class="NeuheitenText">
+                Unsere Neuheiten sind da! Entdecken Sie spannende Neuheiten und kreieren Sie bedeutungsvolle Momente im Alltag.
+            </p>
+            <button class="JetztShoppen">JETZT SHOPPEN</button>
+        </div>
+        
+        <div class="Neuheiten-Bilder">
+            <img src="/images/Firefly energy drink dose, Belgischer Lavendel im Hintergrund, Lavendelmuster auf der dose, göttlich.jpg" alt="Bild 1">
+            <img src="/images/Firefly energy drink dose, belgische Tulpe Hintergrund, Tulpenmuster auf der Dose, göttlich 70844.jpg" alt="Bild 2">
+        </div>
+        <div class="NeuheitenBeschreibung">
+            <!-- Linker Bereich -->
+            <div class="Beschreibung linkerBereich">
+                <h3>Provence Energy</h3>
+                <p>
+                    Provence Energy vereint die belebende Kraft eines Energy Drinks mit dem einzigartigen Duft und Geschmack
+                    von französischem Lavendel. 0,5l
+                </p>
+                <div class="PreisBereich">
+                    <div>
+                        <div class="Preis">3,49 €</div>
+                        <div class="MwSt">inkl. MwSt.</div>
+                    </div>
+                    <img src="/images/cart-plus-svgrepo-com.svg" alt="Warenkorb">
+                </div>
+                <hr>
+                <div class="LiterPreis">0,5l (6,98 € / 1l)</div>
+            </div>
+    
+            <!-- Rechter Bereich -->
+            <div class="Beschreibung rechterBereich">
+                <h3>Tulipe Energy</h3>
+                <p>
+                    Inspiriert von den majestätischen Tulpenfeldern Belgiens, vereint dieser Energy Drink sanfte florale Noten mit belebender Energie. 0,5l
+                </p>
+                <div class="PreisBereich">
+                    <div>
+                        <div class="Preis">3,49 €</div>
+                        <div class="MwSt">inkl. MwSt.</div>
+                    </div>
+                    <img src="/images/cart-plus-svgrepo-com.svg" alt="Warenkorb">
+                </div>
+                <hr>
+                <div class="LiterPreis">0,5l (6,98 € / 1l)</div>
+            </div>
+        </div>
+    </section>
+
+    <section id="LEBereich" class="LimitedEditionBereich">
+        <!-- Bildcontainer für Hover-Effekt -->
+    <div class="LEBildContainer">
+        <picture>
+            <!-- Desktop-Version (ab 1025px) -->
+            <source srcset="/images/Firefly 3 energy drink dosen, Beige Hintergrund.png" media="(min-width: 1025px)">
+            <!-- Mobile-Version (bis 1024px) -->
+            <img src="/images/Firefly 3 energy drink dosen, Beige Hintergrund, Rosenmuster auf der einen dose, Lavendelmuster auf .jpg" 
+                alt="Limited Edition Bild" class="LEBild">
+        </picture>
+    </div>
+        <h4 class="EfMÜberschrift">EXKLUSIV FÜR MITGLIEDER</h4>
+        <h5 class="LEÜberschrift">LIMITED EDITION</h5>
+        <p class="LEText">
+            Schnapp dir die ultra-limitierte Energy-Edition "Zenergy". Spüre den Boost und genieße den einzigartigen Duft der chinesischen Rose – perfekt für echte Gamer!
+        </p>
+        
+        <div class="LEPreisContainer">
+            <span class="LEPreis">19,99 €</span>
+            <span class="LEMwSt">inkl. MwSt.</span>
+            <img src="/images/cart-plus-svgrepo-com.svg" alt="Warenkorb" class="LEWarenkorb">
+        </div>
+    
+        <hr class="LELinie">
+    
+        <p class="LEBeschreibung">
+            Enthält 3 limitierte Designer Dosen der "Zenergy" Reihe!
+        </p>
+    
+        <button class="LEBestellen">JETZT BESTELLEN</button>
+
+    </section>
+
+<script src="/script.js"></script>    
+</body>
+</html>
