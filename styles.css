@@ -492,7 +492,7 @@ body {
     font-family: "Roboto", sans-serif;
     font-size: 14px;
     line-height: 16px;
-    font-weight: bold;
+    font-weight: normal;
     margin-bottom: 10px;
     margin-top: 40px;
     color: #9A7B69;
@@ -557,6 +557,7 @@ body {
     max-width: 300px; /* Maximale Größe */
     aspect-ratio: 1 / 1;
     object-fit: cover; /* Verhindert Verzerrung */
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
 }
 
 /* 📌 Layout ab 1025px: Text links neben den Bildern */
@@ -606,7 +607,7 @@ body {
     flex: 1; /* Flexibel */
 }
 
-/* Rechter Bereich (Provence Energy) */
+/* Rechter Bereich (Tulipe Energy) */
 .Beschreibung.rechterBereich {
     flex: 1; /* Flexibel */
 }
@@ -681,6 +682,7 @@ body {
     font-weight: bold;
     color: #555;
     font-family: "Roboto", sans-serif;
+    padding-bottom: 40px;
 }
 
 /* 📌 Layout ab 1025px */
@@ -696,5 +698,159 @@ body {
 
     .Beschreibung {
         max-width: 240px;
+    }
+}
+
+/*------------ SECTION "LIMITED EDITION" TEXT MIT PREIS ------------*/
+.LimitedEditionBereich {
+    background-color: #FAF9F7;
+    height: 832px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Bild-Container für Hover-Zoom */
+.LEBildContainer {
+    width: 375px;  /* Standardgröße für Mobile */
+    height: 375px;
+    overflow: hidden; /* Verhindert, dass das gezoomte Bild über den Rahmen hinausragt */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Standard-Bildstil für kleine Bildschirme */
+.LEBild {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Hover-Zoom (bleibt im Rahmen) */
+.LEBild:hover {
+    transform: scale(1.1); /* Leichtes Hineinzoomen */
+}
+
+/* 📌 Layout ab 1025px */
+@media (min-width: 1025px) {
+    .LEBildContainer {
+        width: 1920px; /* Breite für Desktop */
+        height: 100%; /* Höhe für Desktop */
+    }
+
+    .LEBild {
+        width: 100%;
+        height: 100%;
+        content: url('/images/Firefly\ 3\ energy\ drink\ dosen\,\ Beige\ Hintergrund.png');
+        
+    }
+}
+
+/* Überschrift */
+.EfMÜberschrift {
+    font-family: "Roboto", sans-serif;
+    font-weight: normal;
+    color: #9A7B69;
+    font-size: 14px;
+    margin-top: 20px;
+}
+
+.LEÜberschrift {
+    font-family: "EB Garamond", serif;
+    font-size: 32px;
+    line-height: 40px;
+    margin-bottom: 16px;
+    color: #242222;
+}
+
+.LEText {
+    font-family: "EB Garamond", serif;
+    font-size: 16px;
+    color: #242222;
+    max-width: 375px;
+    margin-top: 20px;
+}
+
+/* Preisbereich */
+.LEPreisContainer {
+    display: flex;
+    align-items: flex-end;
+    margin-top: 20px;
+}
+
+.LEPreis {
+    font-family: "Roboto", sans-serif;
+    font-size: 22px;
+    font-weight: bold;
+    padding-right: 10px;
+    color: #242222;
+}
+
+.LEMwSt {
+    font-family: "Roboto", sans-serif;
+    font-size: 14px;
+    color: #242222;
+}
+
+/* Warenkorb-Icon */
+.LEWarenkorb {
+    width: 24px;
+    height: 24px;
+    background-image: url('/images/cart-plus-svgrepo-com.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: inline-block;
+    margin-left: 180px;
+}
+
+/* Trennlinie */
+.LELinie {
+    width: 375px;
+    border-top: 1px solid #9A7B69;
+    margin: 4px 0;
+}
+
+/* Beschreibung */
+.LEBeschreibung {
+    font-family: "EB Garamond", serif;
+    font-size: 16px;
+    color: #242222;
+    margin-bottom: 20px;
+}
+
+/* Bestellbutton */
+.LEBestellen {
+    font-family: "Roboto", sans-serif;
+    font-weight: bold;
+    background: #FAF9F7;
+    border: 1px solid rgba(24, 22, 22, 0.3);
+    padding: 10px 20px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    color: rgba(24, 22, 22, 0.9);
+    text-align: center;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.LEBestellen:hover {
+    background: #363434;
+    color: white;
+    border-color: rgba(36, 34, 34, 1);
+}
+
+/* Größere Textbreite ab 1025px */
+@media (min-width: 1025px) {
+    .EfMÜberschrift {
+        margin-top: 40px;
+    }
+    .LEText {
+        max-width: 600px;
     }
 }

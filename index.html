@@ -29,9 +29,9 @@
         <ul>
             <li><a href="#">HOME</a></li>
             <li><a href="#Neu">NEUHEITEN</a></li>
-            <li><a href="#">LIMITED EDITION</a></li>
-            <li><a href="#">BESTSELLER</a></li>
-            <li><a href="#">KONTAKT</a></li>
+            <li><a href="#LEBereich">LIMITED EDITION</a></li>
+            <li><a href="#BSellerID">BESTSELLER</a></li>
+            <li><a href="#KontaktID">KONTAKT</a></li>
         </ul>
     </nav>
 
@@ -61,9 +61,9 @@
             <!-- Buttons -->
             <div class="button-box">
                 <div class="button-container">
-                    <button class="start-btn left">Limited Edition</button>
+                    <a href="#LEBereich" class="start-btn left">Limited Edition</a>
                     <a href="#Neu" class="start-btn center">Neu</a>
-                    <button class="start-btn right">Bestseller</button>
+                    <a href="#BSellerID" class="start-btn right">Bestseller</a>
                 </div>
             </div>
 
@@ -139,6 +139,39 @@
                 <div class="LiterPreis">0,5l (6,98 € / 1l)</div>
             </div>
         </div>
+    </section>
+
+    <section id="LEBereich" class="LimitedEditionBereich">
+        <!-- Bildcontainer für Hover-Effekt -->
+    <div class="LEBildContainer">
+        <picture>
+            <!-- Desktop-Version (ab 1025px) -->
+            <source srcset="/images/Firefly 3 energy drink dosen, Beige Hintergrund.png" media="(min-width: 1025px)">
+            <!-- Mobile-Version (bis 1024px) -->
+            <img src="/images/Firefly 3 energy drink dosen, Beige Hintergrund, Rosenmuster auf der einen dose, Lavendelmuster auf .jpg" 
+                alt="Limited Edition Bild" class="LEBild">
+        </picture>
+    </div>
+        <h4 class="EfMÜberschrift">EXKLUSIV FÜR MITGLIEDER</h4>
+        <h5 class="LEÜberschrift">LIMITED EDITION</h5>
+        <p class="LEText">
+            Schnapp dir die ultra-limitierte Energy-Edition "Zenergy". Spüre den Boost und genieße den einzigartigen Duft der chinesischen Rose – perfekt für echte Gamer!
+        </p>
+        
+        <div class="LEPreisContainer">
+            <span class="LEPreis">19,99 €</span>
+            <span class="LEMwSt">inkl. MwSt.</span>
+            <img src="/images/cart-plus-svgrepo-com.svg" alt="Warenkorb" class="LEWarenkorb">
+        </div>
+    
+        <hr class="LELinie">
+    
+        <p class="LEBeschreibung">
+            Enthält 3 limitierte Designer Dosen der "Zenergy" Reihe!
+        </p>
+    
+        <button class="LEBestellen">JETZT BESTELLEN</button>
+
     </section>
 
 <script src="/script.js"></script>    
