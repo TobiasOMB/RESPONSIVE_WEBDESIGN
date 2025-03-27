@@ -468,6 +468,67 @@ body {
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.6);
 }
 
+/*------------ SECTION "Sakuraya Info" ------------*/
+
+.SakurayaInfo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.UeberTextbereich {
+    text-align: left;
+    width: 90%;
+    max-width: 600px;
+    margin-bottom: 20px;
+}
+
+.section-subtitle {
+    font-family: "Roboto", sans-serif;
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: normal;
+    margin-bottom: 10px;
+    margin-top: 40px;
+    color: #9A7B69;
+}
+
+.section-title {
+    font-family: "EB Garamond", serif;
+    font-size: 32px;
+    line-height: 40px;
+    margin-bottom: 16px;
+    color: #242222;
+}
+
+.section-text {
+    font-family: "EB Garamond", serif;
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 30px;
+    color: rgba(24, 22, 22, 1);
+}
+
+/* 📌 Layout ab 1025px: Text links neben den Bildern */
+@media (min-width: 1025px) {
+    .SakurayaInfo {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        max-width: 1024px;
+        margin: 0 auto;
+        flex-wrap: wrap; /* Lässt Elemente umbrechen, falls nötig */
+    }
+
+    .UeberTextbereich {
+        max-width: 800px;
+        margin-right: 40px;
+    }
+}
+
+
 /*------------ SECTION "NEUHEITEN" ------------*/
 #Neu {
     scroll-margin-top: 80px; /* Scrollt 60px über das Ziel hinaus */
@@ -853,4 +914,40 @@ body {
     .LEText {
         max-width: 600px;
     }
+}
+
+
+/*------------ SCROLL UP Button ------------*/
+
+/* Scroll-Up Button Styling */
+#scrollUpBtn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background-color: #1A1919;
+    border: none;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease-in-out, visibility 0.3s;
+    z-index: 150;
+}
+
+/* SVG im Button */
+#scrollUpBtn img {
+    width: 70%;
+    height: 70%;
+    z-index: 151;
+}
+
+/* Button sichtbar */
+#scrollUpBtn.show {
+    opacity: 1;
+    visibility: visible;
 }

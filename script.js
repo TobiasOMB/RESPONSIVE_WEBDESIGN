@@ -124,4 +124,31 @@ document.addEventListener("DOMContentLoaded", function () {
             });
         });
     });
+
+    // Scroll-Up Button Steuerung
+    const scrollUpBtn = document.createElement("button");
+    scrollUpBtn.id = "scrollUpBtn";
+    scrollUpBtn.innerHTML = '<img src="images/up-square-svgrepo-com.svg" alt="Nach oben">';
+    document.body.appendChild(scrollUpBtn);
+
+    let lastScrollY = window.scrollY;
+    let isVisible = false;
+
+    window.addEventListener("scroll", () => {
+        let currentScrollY = window.scrollY;
+
+        if (currentScrollY > 300 && currentScrollY < lastScrollY) {
+            scrollUpBtn.classList.add("show");
+            isVisible = true;
+        } else if (currentScrollY < 100 || currentScrollY > lastScrollY) {
+            scrollUpBtn.classList.remove("show");
+            isVisible = false;
+        }
+
+        lastScrollY = currentScrollY;
+    });
+
+    scrollUpBtn.addEventListener("click", () => {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+    });
 });
