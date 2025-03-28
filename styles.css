@@ -719,7 +719,7 @@ body {
     font-family: "EB Garamond", serif;
     color: #242222;
     font-size: 18px;
-    line-height: 19px;
+    line-height: 20px;
     font-weight: bold;
     margin-bottom: 8px;
 }
@@ -1000,6 +1000,284 @@ body {
     visibility: visible;
 }
 
+/*------------ BESTSELLER BILDER UND ÜBERSCHRIFT TEXT - Part 1 ------------*/
+
+.Bestsellers {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Textbereich */
+.Bestseller-Textbereich {
+    text-align: left;
+    width: 90%;
+    max-width: 600px;
+    margin-bottom: 20px;
+}
+
+.Bestseller-Klein {
+    font-family: "Roboto", sans-serif;
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: normal;
+    margin-bottom: 10px;
+    margin-top: 40px;
+    color: #9A7B69;
+
+}
+
+.Bestseller-Groß {
+    font-family: "EB Garamond", serif;
+    font-size: 32px;
+    line-height: 40px;
+    margin-bottom: 16px;
+    color: #242222;
+}
+
+.BestsellerText {
+    font-family: "EB Garamond", serif;
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 30px;
+    color: rgba(24, 22, 22, 1)
+}
+
+/* Bildbereich */
+.Bestseller-Bilder1 {
+    display: flex;
+    gap: 24px; /* Abstand zwischen den Bildern */
+    justify-content: center;
+    width: 100%;
+    max-width: 100%; /* Verhindert, dass der Container zu groß wird */
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.Bestseller-Bilder2 {
+    display: flex;
+    gap: 24px; /* Abstand zwischen den Bildern */
+    justify-content: center;
+    width: 100%;
+    max-width: 100%; /* Verhindert, dass der Container zu groß wird */
+    padding-left: 20px;
+    padding-right: 20px;
+    
+}
+
+/* Bilder: Immer nebeneinander & proportional skalieren */
+.Bestseller-Bilder1 img {
+    width: calc(50% - 12px); /* Zwei Bilder, abzüglich des 24px Abstands */
+    max-width: 300px; /* Maximale Größe */
+    aspect-ratio: 1 / 1;
+    object-fit: cover; /* Verhindert Verzerrung */
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+}
+
+.Bestseller-Bilder2 img {
+    width: calc(50% - 12px); /* Zwei Bilder, abzüglich des 24px Abstands */
+    max-width: 300px; /* Maximale Größe */
+    aspect-ratio: 1 / 1;
+    object-fit: cover; /* Verhindert Verzerrung */
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* 📌 Layout ab 1025px: Text links neben den Bildern */
+@media (min-width: 1025px) {
+    .Bestsellers {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        max-width: 1024px;
+        margin: 0 auto;
+        flex-wrap: wrap; /* Lässt Elemente umbrechen, falls nötig */
+    }
+
+    .Bestseller-Textbereich {
+        max-width: 400px;
+        margin-right: 40px;
+    }
+
+    .Bestseller-Bilder1 {
+        flex: 1;
+        justify-content: flex-start;
+        padding-top: 50px;
+        gap: 40px;
+    }
+
+    .Bestseller-Bilder2 {
+        flex: 1;
+        justify-content: flex-end;
+        padding-top: 50px;
+        gap: 40px;
+        padding-left: 20px;
+        padding-right: 4px;
+    }
+
+    .Bestseller-Bilder1 img {
+        max-width: 250px;
+    }
+
+    .Bestseller-Bilder2 img {
+        max-width: 240px;
+    }
+}
+
+/*------------ BESTSELLER BEREICH TEXT und PREIS ------------*/
+
+#BSellerID {
+    scroll-margin-top: 80px; /* Scrollt 60px über das Ziel hinaus */
+}
+
+
+
+.BestsellerBeschreibung1 {
+    display: flex;
+    justify-content: space-between; /* Abstand zwischen den beiden Bereichen */
+    gap: 24px; /* Abstand zwischen den beiden Bereichen */
+    width: 90%; /* gleiche Breite wie der Textbereich */
+    max-width: 600px; /* gleiche maximale Breite wie der Textbereich */
+    margin: 0 auto; /* Zentriert den Bereich */
+    padding-top: 20px;
+}
+
+.BestsellerBeschreibung2 {
+    display: flex;
+    justify-content: space-between; /* Abstand zwischen den beiden Bereichen */
+    gap: 24px; /* Abstand zwischen den beiden Bereichen */
+    width: 90%; /* gleiche Breite wie der Textbereich */
+    max-width: 600px; /* gleiche maximale Breite wie der Textbereich */
+    margin: 0 auto; /* Zentriert den Bereich */
+    padding-top: 20px;
+}
+
+/* Linker Bereich (Camélia Boost) */
+.Beschreibung.linkerBereich1 {
+    flex: 1; /* Flexibel */
+}
+
+/* Rechter Bereich (Zestador) */
+.Beschreibung.rechterBereich1 {
+    flex: 1; /* Flexibel */
+}
+
+/* Linker Bereich (Camélia Boost) */
+.Beschreibung.linkerBereich2 {
+    flex: 1; /* Flexibel */
+}
+
+/* Rechter Bereich (Zestador) */
+.Beschreibung.rechterBereich2 {
+    flex: 1; /* Flexibel */
+}
+
+/* Überschrift "Provence Energy" */
+.Beschreibung h3 {
+    font-family: "EB Garamond", serif;
+    color: #242222;
+    font-size: 18px;
+    line-height: 19px;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+/* Produktbeschreibung */
+.Beschreibung p {
+    font-family: "EB Garamond", serif;
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 10px;
+    line-height: 20px;
+}
+
+.Beschreibung.linkerBereich1 p {
+    height: 120px;
+}
+
+.Beschreibung.rechterBereich1 p {
+    height: 120px;
+}
+
+.Beschreibung.linkerBereich2 p {
+    height: 120px;
+}
+
+.Beschreibung.rechterBereich2 p {
+    height: 120px;
+}
+
+/* Preis- und MwSt-Bereich */
+.PreisBereich {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 4px;
+}
+
+/* Preis */
+.Preis {
+    font-size: 14px;
+    font-weight: bold;
+    font-family: "Roboto", sans-serif;
+    
+}
+
+/* MwSt */
+.MwSt {
+    font-size: 12px;
+    color: #777;
+    font-family: "Roboto", sans-serif;
+}
+
+/* SVG-Icon */
+.PreisBereich img {
+    width: 20px;
+    height: 20px;
+}
+
+/* Trennlinie */
+.Beschreibung hr {
+    border: none;
+    height: 1px;
+    background-color: #9A7B69;
+    margin: 8px 0;
+}
+
+/* Literpreis */
+.LiterPreis {
+    font-size: 12px;
+    font-weight: bold;
+    color: #555;
+    font-family: "Roboto", sans-serif;
+    padding-bottom: 40px;
+}
+
+/* 📌 Layout ab 1025px */
+@media (min-width: 1025px) {
+    .BestsellerBeschreibung1 {
+        max-width: 520px; /* Begrenzte Breite */
+        margin-top: 10px;
+        display: flex;
+        justify-content: space-between;
+        gap: 40px;
+        margin-left: 464px; /* Drückt den Block nach rechts */
+    }
+
+    .BestsellerBeschreibung2 {
+        max-width: 520px; /* Begrenzte Breite */
+        margin-top: 10px;
+        display: flex;
+        justify-content: space-between;
+        gap: 40px;
+        margin-left: 464px; /* Drückt den Block nach rechts */
+    }
+
+    .Beschreibung {
+        max-width: 240px;
+    }
+}
 /*------------ FOOTER ------------*/
 
 /* 🌑 Erster Bereich: Newsletter */
