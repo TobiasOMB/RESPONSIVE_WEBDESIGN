@@ -846,7 +846,7 @@ body {
 @media (min-width: 1025px) {
     .LEBildContainer {
         width: 984px; /* Breite für Desktop */
-        height: 100%; /* Höhe für Desktop */
+        height: 375px; /* Höhe für Desktop */
     }
 
     .LEBild {
