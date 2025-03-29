@@ -258,6 +258,7 @@ function hinzufuegenZumWarenkorb(id) {
     }
 
     localStorage.setItem("warenkorb", JSON.stringify(warenkorb));
+    updateWarenkorbBadge(); // Badge aktualisieren
 }
 
 function entferneProdukt(index) {
@@ -269,6 +270,7 @@ function entferneProdukt(index) {
 
     localStorage.setItem("warenkorb", JSON.stringify(warenkorb));
     zeigeWarenkorb();
+    updateWarenkorbBadge(); // Badge aktualisieren
 }
 
 function loescheWarenkorb() {
@@ -353,6 +355,17 @@ document.getElementById("loeschen").addEventListener("click", () => loescheWaren
 
 // Event-Listener für Bezahlen
 document.getElementById("bezahlen").addEventListener("click", () => bezahlen());
+
+function updateWarenkorbBadge() {
+    const warenkorbIcon = document.querySelector(".einkauf-icon");
+
+    if (warenkorb.length > 0) {
+        warenkorbIcon.classList.add("has-items"); // Badge anzeigen
+    } else {
+        warenkorbIcon.classList.remove("has-items"); // Badge ausblenden
+    }
+}
+
 
 //---------------------------------------
 

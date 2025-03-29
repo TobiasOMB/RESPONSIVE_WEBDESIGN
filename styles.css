@@ -88,6 +88,25 @@ body {
     right: 16px;
     top: 50%;
     transform: translateY(-50%);
+    cursor: pointer;
+}
+
+.Menue .einkauf-icon::after {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: rgb(255, 153, 0);
+    border-radius: 50%;
+    bottom: 0;
+    left: 0;
+    transform: translate(-10%, 10%); /* Justiert den Kreis etwas nach links unten */
+    opacity: 0; /* Standardmäßig unsichtbar */
+    transition: opacity 0.3s ease-in-out;
+}
+
+.Menue .einkauf-icon.has-items::after {
+    opacity: 1; /* Wird sichtbar, wenn Produkte im Warenkorb sind */
 }
 
 /* Profil-Icon wird links neben dem Einkaufswagen-Icon positioniert */
