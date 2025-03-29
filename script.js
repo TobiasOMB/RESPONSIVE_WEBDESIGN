@@ -360,9 +360,6 @@ document.getElementById("bezahlen").addEventListener("click", () => bezahlen());
 document.querySelector(".LEBestellen").addEventListener("click", function() {
     // Hier wird das Produkt3 zum Warenkorb hinzugefügt
     hinzufuegenZumWarenkorb("Produkt3");
-
-    // Bestätigung für den Benutzer
-    alert("Produkt3 wurde dem Warenkorb hinzugefügt!");
 });
 
 });
