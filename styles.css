@@ -91,7 +91,7 @@ body {
 }
 
 /* Profil-Icon wird links neben dem Einkaufswagen-Icon positioniert */
-.Menue .profil-icon {
+/*.Menue .profil-icon {
     height: 30px;
     width: 30px;
     background-image: url('images/user-circle-svgrepo-com.svg');
@@ -100,9 +100,9 @@ body {
     opacity: 1;
     position: absolute;
     right: 60px; /* 16px Abstand vom Einkaufswagen (40px + 16px) */
-    top: 50%;
+    /*top: 50%;
     transform: translateY(-50%);
-}
+}*/
 
 
 /* Sakuraya-Logo mittig fixieren */
@@ -447,6 +447,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center; /* Vertikale Zentrierung */
+    text-decoration: none;
 }
 
 /* Hover-Effekt für den "JETZT ENTDECKEN"-Button */
@@ -454,6 +455,7 @@ body {
     background-color: rgba(241, 141, 183, 0.95);; /* Hintergrund wird dunkel */
     color: #FFFFFF; /* Schriftfarbe wird weiß */
     box-shadow: 0px 0px 10px rgba(242, 176, 209, 0.3);
+    text-decoration: none;
 }
 
 /*------------ SECTION "Sakuraya Info" ------------*/
@@ -623,13 +625,14 @@ body {
     font-weight: bold;
     background: white;
     border: 1px solid rgba(24, 22, 22, 0.3);
-    padding: 10px 20px;
+    padding: 10px 40px;
     font-size: 14px;
     cursor: pointer;
     transition: all 0.3s ease;
     color: rgba(24, 22, 22, 0.9);
     text-align: center;
     margin-bottom: 20px;
+    text-decoration: none;
 }
 
 .JetztShoppen:hover {
@@ -642,6 +645,12 @@ body {
     margin-bottom: 20px;
 }
 
+@media (min-width: 1025px) {
+    .JetztShoppen {
+        display: none;
+    }
+}
+
 /* Bildbereich */
 .Neuheiten-Bilder {
     display: flex;
@@ -651,15 +660,22 @@ body {
     max-width: 100%; /* Verhindert, dass der Container zu groß wird */
     padding-left: 20px;
     padding-right: 20px;
+    margin-top: 20px;
 }
 
 /* Bilder: Immer nebeneinander & proportional skalieren */
 .Neuheiten-Bilder img {
-    width: calc(50% - 12px); /* Zwei Bilder, abzüglich des 24px Abstands */
-    max-width: 300px; /* Maximale Größe */
-    aspect-ratio: 1 / 1;
-    object-fit: cover; /* Verhindert Verzerrung */
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+    width: 100%; /* Skaliert mit der Box */
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Zoom-Effekt */
+.Neuheiten-Bilder img:hover {
+    transform: scale(1.1);
+    transform-origin: center;
 }
 
 /* 📌 Layout ab 1025px: Text links neben den Bildern */
@@ -807,7 +823,7 @@ body {
 /*------------ SECTION "LIMITED EDITION" TEXT MIT PREIS ------------*/
 
 #LEBereich {
-    scroll-margin-top: 80px; /* Scrollt 60px über das Ziel hinaus */
+    scroll-margin-top: 110px; /* Scrollt 60px über das Ziel hinaus */
 }
 
 .LimitedEditionBereich {
@@ -1065,27 +1081,37 @@ body {
     gap: 24px; /* Abstand zwischen den Bildern */
     justify-content: center;
     width: 100%;
+    height: 100%;
     max-width: 100%; /* Verhindert, dass der Container zu groß wird */
     padding-left: 20px;
-    padding-right: 20px;
-    
+    padding-right: 20px;   
 }
 
-/* Bilder: Immer nebeneinander & proportional skalieren */
+/* Wrapper für das Bild – hält die Box auf 300x300px */
+.bestseller-image-wrapper {
+    width: 100%;
+    max-width: 300px;
+    aspect-ratio: 1 / 1; /* Stellt sicher, dass das Bild immer quadratisch bleibt */
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Bilder füllen die Box */
+.Bestseller-Bilder2 img, 
 .Bestseller-Bilder1 img {
-    width: calc(50% - 12px); /* Zwei Bilder, abzüglich des 24px Abstands */
-    max-width: 300px; /* Maximale Größe */
-    aspect-ratio: 1 / 1;
-    object-fit: cover; /* Verhindert Verzerrung */
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+    width: 100%; /* Skaliert mit der Box */
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out;
 }
 
-.Bestseller-Bilder2 img {
-    width: calc(50% - 12px); /* Zwei Bilder, abzüglich des 24px Abstands */
-    max-width: 300px; /* Maximale Größe */
-    aspect-ratio: 1 / 1;
-    object-fit: cover; /* Verhindert Verzerrung */
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+/* Zoom-Effekt */
+.Bestseller-Bilder2 img:hover, 
+.Bestseller-Bilder1 img:hover {
+    transform: scale(1.1);
+    transform-origin: center;
 }
 
 /* 📌 Layout ab 1025px: Text links neben den Bildern */
@@ -1110,6 +1136,7 @@ body {
         justify-content: flex-start;
         padding-top: 50px;
         gap: 40px;
+        display: flex;
     }
 
     .Bestseller-Bilder2 {
@@ -1117,16 +1144,24 @@ body {
         justify-content: flex-end;
         padding-top: 50px;
         gap: 40px;
-        padding-left: 20px;
-        padding-right: 4px;
+        display: flex;
+        margin-left: 440px;
     }
 
     .Bestseller-Bilder1 img {
         max-width: 250px;
+        max-height: 250px;
     }
 
     .Bestseller-Bilder2 img {
-        max-width: 240px;
+        max-width: 250px;
+        max-height: 250px;
+    }
+
+    .bestseller-image-wrapper {
+        width: 100%;
+        max-width: 250px; /* Anpassung für kleinere Bilder auf größeren Screens */
+        aspect-ratio: 1 / 1;
     }
 }
 
@@ -1296,7 +1331,7 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
     width: 90%;
-    max-height: 500px;
+    max-height: 900px;
     max-width: 800px;
     overflow-y: auto;
     background: rgba(24, 22, 22, 0.9);
