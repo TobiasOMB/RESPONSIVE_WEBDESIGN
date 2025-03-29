@@ -652,6 +652,7 @@ body {
     text-align: center;
     margin-bottom: 20px;
     text-decoration: none;
+    margin-top: 10px;
 }
 
 .JetztShoppen:hover {
@@ -765,15 +766,14 @@ body {
     font-size: 16px;
     line-height: 16px;
     color: #333;
-    margin-bottom: 16px;
 }
 
 .Beschreibung.linkerBereich p {
-    height: 120px;
+    height: 45%;
 }
 
 .Beschreibung.rechterBereich p {
-    height: 120px;
+    height: 45%;
 }
 
 /* Preis- und MwSt-Bereich */
@@ -820,7 +820,7 @@ body {
     font-weight: bold;
     color: #555;
     font-family: "Roboto", sans-serif;
-    padding-bottom: 40px;
+    margin-bottom: 40px;
 }
 
 /* 📌 Layout ab 1025px */
@@ -863,6 +863,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-top: 25px;
 }
 
 .LEPreisContainer img {
@@ -927,22 +928,25 @@ body {
     display: flex;
     align-items: flex-end;
     margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
 }
 
 .LEPreis {
     font-family: "Roboto", sans-serif;
     font-size: 20px;
     font-weight: bold;
-    padding-right: 10px;
     color: #242222;
     margin-bottom: -1px;
-    
+    min-width: 80px;
 }
 
 .LEMwSt {
     font-family: "Roboto", sans-serif;
     font-size: 14px;
     color: #242222;
+    padding-left: 10px;
+    min-width: 80px;
 }
 
 /* Warenkorb-Icon */
@@ -954,14 +958,16 @@ body {
     background-repeat: no-repeat;
     background-position: center;
     display: inline-block;
-    margin-left: 180px;
+    margin-left: 150px;
 }
 
 /* Trennlinie */
 .LELinie {
-    width: 350px;
+    width: 330px;
     border-top: 1px solid #9A7B69;
     margin: 4px 0;
+    margin-left: 40px;
+    margin-right: 40px;
 }
 
 /* Beschreibung */
@@ -1001,6 +1007,10 @@ body {
     }
     .LEText {
         max-width: 600px;
+    }
+
+    .LELinie {
+        width: 350px;
     }
 }
 
@@ -1252,19 +1262,19 @@ body {
 }
 
 .Beschreibung.linkerBereich1 p {
-    height: 120px;
+    height: 45%;
 }
 
 .Beschreibung.rechterBereich1 p {
-    height: 120px;
+    height: 45%;
 }
 
 .Beschreibung.linkerBereich2 p {
-    height: 120px;
+    height: 45%;
 }
 
 .Beschreibung.rechterBereich2 p {
-    height: 120px;
+    height: 45%;
 }
 
 /* Preis- und MwSt-Bereich */

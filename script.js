@@ -277,6 +277,7 @@ function loescheWarenkorb() {
     warenkorb = [];
     localStorage.removeItem("warenkorb");
     zeigeWarenkorb();
+    updateWarenkorbBadge(); // Badge aktualisieren
 }
 
 // Funktion zum Bezahlen (wird den Warenkorb schließen und das Bestellbestätigungs-Pop-up anzeigen)
