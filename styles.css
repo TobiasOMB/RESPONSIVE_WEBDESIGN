@@ -768,6 +768,7 @@ body {
 .PreisBereich img {
     width: 20px;
     height: 20px;
+    cursor: pointer;
 }
 
 /* Trennlinie */
@@ -827,6 +828,10 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.LEPreisContainer img {
+    cursor: pointer;
 }
 
 /* Standard-Bildstil für kleine Bildschirme */
@@ -906,7 +911,7 @@ body {
 }
 
 /* Warenkorb-Icon */
-.LEWarenkorb {
+.LEWarenkorb3 {
     width: 24px;
     height: 24px;
     background-image: url('images/cart-plus-svgrepo-com.svg');
@@ -1278,6 +1283,193 @@ body {
         max-width: 240px;
     }
 }
+
+
+/*------------ WARENKORB ------------*/
+
+/* Gemeinsame Formatierung für beide Pop-ups (Warenkorb und Bestellbestätigung) */
+.popup {
+    font-family: "EB Garamond", serif;
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    max-height: 500px;
+    max-width: 800px;
+    overflow-y: auto;
+    background: rgba(24, 22, 22, 0.9);
+    color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    scrollbar-width: none; /* Für Firefox */
+}
+
+.popup::-webkit-scrollbar {
+    display: none;
+}
+
+.overlayWK {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+}
+
+.produkt {
+    display: flex;
+    justify-content:flex-start;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid gray;
+    flex-direction: row;
+}
+
+.produkt span {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.produkt img {
+    width: 20px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.produkt img.produkt-bild {
+    width: 120px; /* Bildgröße anpassen */
+    height: auto;
+    margin-right: 20px;
+}
+
+.produkt-info {
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.produkt-info span {
+    margin-bottom: 5px;
+}
+
+.button-container {
+    display: flex;
+    justify-content: flex-end; /* Buttons nach rechts ausrichten */
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.button {
+    font-family: "Roboto", sans-serif;
+    background: rgba(255, 255, 255, 1);
+    padding: 10px;
+    border: none;
+    border-radius: 0px;
+    height: 50px;
+    width: 180px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    color: #242222;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button:hover {
+    background-color: rgba(241, 141, 183, 1);
+    color: #FFFFFF;
+    box-shadow: 0px 0px 10px rgba(242, 176, 209, 0.3);
+}
+
+.popup h2 {
+    font-family: "EB Garamond", serif;
+    font-size: 32px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Schließen-Button im Warenkorb Pop-up */
+#schließen-warenkorb {
+    background: rgba(255, 255, 255, 0.1);
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    z-index: 1010;
+}
+
+#schließen-warenkorb:hover {
+    opacity: 0.9;
+    background-color: rgb(250, 39, 50);
+}
+
+.gesamtpreis {
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+    text-align: right;
+}
+
+/* Schließen-Button im Bestellbestätigung Pop-up */
+#bestaetigung-schliessen {
+    background: rgba(255, 255, 255, 0.1);
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    z-index: 1010;
+}
+
+#bestaetigung-schliessen:hover {
+    opacity: 0.9;
+    background-color: rgb(250, 39, 50);
+}
+
+.popup-inhalt {
+    font-family: "EB Garamond", serif;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 20px;
+    max-width: 800px;
+    max-height: 500px;
+}
+
+.popup-inhalt h2 {
+    font-family: "EB Garamond", serif;
+    margin-bottom: 20px;
+    font-size: 32px;
+}
+
+.popup-inhalt p {
+    margin-top: 20px;
+}
+
+.popup-inhalt p strong {
+    font-family: "Roboto", sans-serif;
+}
+
+.popup-inhalt p span {
+    font-size: 14px;
+}
+
+
 /*------------ FOOTER ------------*/
 
 /* 🌑 Erster Bereich: Newsletter */

@@ -24,6 +24,39 @@
         </section>
     </header>
 
+    <!-- Overlay für das Pop-up Fenster vom Warenkorb -->
+    <div class="overlayWK" id="overlayWK"></div>
+
+    <!-- Warenkorb Pop-up -->
+    <div class="popup" id="warenkorb-popup">
+            <!-- Schließen-Button für den gesamten Warenkorb -->
+            <img id="schließen-warenkorb" src="images/xmark-svgrepo-com.svg" alt="Warenkorb schließen">
+
+            <h2>Dein Warenkorb</h2>
+            <div id="warenkorb-inhalt"></div>
+            <div class="button-container">
+                <button class="button" id="loeschen">WARENKORB LÖSCHEN</button>
+                <button class="button" id="bezahlen">JETZT BEZAHLEN</button>
+            </div>
+    </div>
+
+    <!-- Overlay für das Bestellbestätigungs-Pop-up -->
+    <div class="overlayWK" id="overlayWK-bestaetigung"></div>
+
+    <!-- Bestellbestätigungs-Pop-up -->
+    <div class="popup" id="bestaetigung-popup">
+        <!-- Schließen-Button für die Bestellbestätigung -->
+        <img id="bestaetigung-schliessen" src="images/xmark-svgrepo-com.svg" alt="Schließen">
+
+        <div class="popup-inhalt">
+            <h2>Bestellung erfolgreich!</h2>
+            
+            <p><strong>IHRE BESTELLNUMMER</strong> <br> <span id="bestellnummer"></span></p>
+        </div>
+    </div>
+
+
+
      <!-- Seitenmenü -->
      <nav id="side-menu">
         <ul>
@@ -135,7 +168,7 @@
                         <div class="Preis">3,49 €</div>
                         <div class="MwSt">inkl. MwSt.</div>
                     </div>
-                    <img src="images/cart-plus-svgrepo-com.svg" alt="Warenkorb">
+                    <img src="images/cart-plus-svgrepo-com.svg" id="Produkt1" alt="Warenkorb1">
                 </div>
                 <hr>
                 <div class="LiterPreis">0,5l (6,98 € / 1l)</div>
@@ -152,7 +185,7 @@
                         <div class="Preis">3,49 €</div>
                         <div class="MwSt">inkl. MwSt.</div>
                     </div>
-                    <img src="images/cart-plus-svgrepo-com.svg" alt="Warenkorb">
+                    <img src="images/cart-plus-svgrepo-com.svg" id="Produkt2" alt="Warenkorb2">
                 </div>
                 <hr>
                 <div class="LiterPreis">0,5l (6,98 € / 1l)</div>
@@ -180,7 +213,7 @@
         <div class="LEPreisContainer">
             <span class="LEPreis">19,99 €</span>
             <span class="LEMwSt">inkl. MwSt.</span>
-            <img src="images/cart-plus-svgrepo-com.svg" alt="Warenkorb" class="LEWarenkorb">
+            <img src="images/cart-plus-svgrepo-com.svg" alt="Warenkorb3" id="Produkt3" class="LEWarenkorb3">
         </div>
     
         <hr class="LELinie">
@@ -219,7 +252,7 @@
                         <div class="Preis">3,49 €</div>
                         <div class="MwSt">inkl. MwSt.</div>
                     </div>
-                    <img src="images/cart-plus-svgrepo-com.svg" alt="Warenkorb">
+                    <img src="images/cart-plus-svgrepo-com.svg" id="Produkt4" alt="Warenkorb4">
                 </div>
                 <hr>
                 <div class="LiterPreis">0,5l (6,98 € / 1l)</div>
@@ -236,7 +269,7 @@
                         <div class="Preis">3,49 €</div>
                         <div class="MwSt">inkl. MwSt.</div>
                     </div>
-                    <img src="images/cart-plus-svgrepo-com.svg" alt="Warenkorb">
+                    <img src="images/cart-plus-svgrepo-com.svg" id="Produkt5" alt="Warenkorb5">
                 </div>
                 <hr>
                 <div class="LiterPreis">0,5l (6,98 € / 1l)</div>
@@ -258,7 +291,7 @@
                         <div class="Preis">3,49 €</div>
                         <div class="MwSt">inkl. MwSt.</div>
                     </div>
-                    <img src="images/cart-plus-svgrepo-com.svg" alt="Warenkorb">
+                    <img src="images/cart-plus-svgrepo-com.svg" id="Produkt6" alt="Warenkorb6">
                 </div>
                 <hr>
                 <div class="LiterPreis">0,5l (6,98 € / 1l)</div>
@@ -275,7 +308,7 @@
                         <div class="Preis">3,49 €</div>
                         <div class="MwSt">inkl. MwSt.</div>
                     </div>
-                    <img src="images/cart-plus-svgrepo-com.svg" alt="Warenkorb">
+                    <img src="images/cart-plus-svgrepo-com.svg" id="Produkt7" alt="Warenkorb7">
                 </div>
                 <hr>
                 <div class="LiterPreis">0,5l (6,98 € / 1l)</div>
