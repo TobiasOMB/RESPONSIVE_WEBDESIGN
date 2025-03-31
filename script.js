@@ -2,6 +2,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // Rabatt und Lieferzeit Steuerung
     let rabattCall = document.getElementById('RabattCall');
     let lieferzeit = document.getElementById('Lieferzeit');
+    updateWarenkorbBadge(); // Badge aktualisieren
 
     function toggleVisibility(element, nextFunction) {
         element.classList.add('show');
