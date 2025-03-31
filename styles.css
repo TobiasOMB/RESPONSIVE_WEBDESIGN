@@ -1647,9 +1647,21 @@ body {
     opacity: 0.6;
 }
 
+#IncID {
+    margin-bottom: 30px;
+}
+
 .footer-bottom p {
     font-family: "Roboto", sans-serif;
     font-size: 14px;
     color: #ffffff;
+    margin-top: 5px;
+}
+
+.footer-bottom  a{
+    font-family: "Roboto", sans-serif;
+    font-size: 14px;
+    color: #ffffff;
     margin-top: 20px;
+    text-decoration: none;
 }
