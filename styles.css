@@ -1650,6 +1650,7 @@ body {
     height: 30px;
     cursor: pointer;
     transition: opacity 0.3s;
+    margin-bottom: 10px;
 }
 
 .social-icons img:hover {
@@ -1678,4 +1679,10 @@ body {
 
 .footer-bottom a:hover {
     color: #c2a07d;
+}
+
+.LogoFooter img{
+    height: 70%;
+    width: 70%;
+    margin-bottom: 20px;
 }
