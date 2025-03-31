@@ -1035,6 +1035,8 @@ body {
     visibility: hidden;
     transition: opacity 0.3s ease-in-out, visibility 0.3s;
     z-index: 150;
+    transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
+    transform-origin: center;
 }
 
 /* SVG im Button */
@@ -1048,6 +1050,12 @@ body {
 #scrollUpBtn.show {
     opacity: 1;
     visibility: visible;
+}
+
+#scrollUpBtn:hover{
+    transform: scale(1.1);
+    transform-origin: center;
+    box-shadow: 0 0 16px rgba(0, 0, 0, 0.5);
 }
 
 /*------------ BESTSELLER BILDER UND ÜBERSCHRIFT TEXT - Part 1 ------------*/
