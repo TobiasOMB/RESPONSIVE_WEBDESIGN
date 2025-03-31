@@ -2,6 +2,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // Rabatt und Lieferzeit Steuerung
     let rabattCall = document.getElementById('RabattCall');
     let lieferzeit = document.getElementById('Lieferzeit');
+    let firstBestellung = document.getElementById('FirstBestellung');
 
     function toggleVisibility(element, nextFunction) {
         element.classList.add('show');
@@ -16,10 +17,15 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     function showLieferzeit() {
-        toggleVisibility(lieferzeit, showRabattCall);
+        toggleVisibility(lieferzeit, showFirstBestellung);
+    }
+
+    function showFirstBestellung() {
+        toggleVisibility(firstBestellung, showRabattCall);
     }
 
     showRabattCall(); // Starte mit RabattCall
+
 
      // Slideshow Steuerung
     let slideIndex = 0;

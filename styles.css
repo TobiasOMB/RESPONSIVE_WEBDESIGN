@@ -24,7 +24,7 @@ body {
 }
 
 #RabattCall,
-#Lieferzeit {
+#Lieferzeit, #FirstBestellung {
     position: absolute; /* Positioniert die Elemente exakt an der gleichen Stelle */
     top: 50%; /* Setzt beide in der Mitte des Containers */
     left: 50%;
@@ -40,7 +40,7 @@ body {
 }
 
 #RabattCall.show,
-#Lieferzeit.show {
+#Lieferzeit.show, #FirstBestellung.show {
     opacity: 1; /* Sichtbar */
     visibility: visible; /* Sichtbar */
     transition: opacity 2s, visibility 2s; /* Übergang für die Sichtbarkeit */
