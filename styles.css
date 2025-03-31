@@ -1666,10 +1666,15 @@ body {
     margin-top: 5px;
 }
 
-.footer-bottom  a{
+.footer-bottom a {
     font-family: "Roboto", sans-serif;
     font-size: 14px;
     color: #ffffff;
     margin-top: 20px;
     text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+
+.footer-bottom a:hover {
+    color: #c2a07d;
 }
