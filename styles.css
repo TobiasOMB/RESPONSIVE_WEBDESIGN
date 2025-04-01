@@ -1682,15 +1682,7 @@ body {
 }
 
 .LogoFooter img{
-    height: 70%;
-    width: 70%;
-    margin-bottom: 20px;
-}
-
-@media (max-width: 1024px) {
-.LogoFooter img {
     height: 25px;
     width: 200px;
     margin-bottom: 20px;
-    }
 }
