@@ -370,7 +370,7 @@ body {
 /* Dots */
 .dots-container {
     position: absolute;
-    bottom: 20px;
+    bottom: 30px;
     left: 50%;
     transform: translateX(-50%);
     display: flex;
@@ -501,6 +501,7 @@ body {
     transform: translateX(-50%); /* Exakte horizontale Zentrierung */
     box-shadow: 0px 0px 60px rgba(0, 0, 0, 0.4);
     z-index: 2;
+    margin-bottom: 80px;
 }
 
 /* Styling für den "JETZT ENTDECKEN"-Button */
@@ -901,7 +902,7 @@ body {
 
 .LimitedEditionBereich {
     background-color: #f7f2e8;
-    height: 780px;
+    height: 900px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -918,6 +919,7 @@ body {
     align-items: center;
     justify-content: center;
     margin-top: 25px;
+    box-shadow: 0 0 16px rgba(0, 0, 0, 0.3);
 }
 
 .LEPreisContainer img {
@@ -958,7 +960,7 @@ body {
     font-weight: normal;
     color: #9A7B69;
     font-size: 14px;
-    margin-top: 20px;
+    margin-top: 60px;
 }
 
 .LEÜberschrift {
@@ -977,11 +979,20 @@ body {
     margin-top: 20px;
 }
 
+.LEText2 {
+    font-family: "EB Garamond", serif;
+    font-size: 16px;
+    color: #242222;
+    max-width: 375px;
+    margin-top: 10px;
+    
+}
+
 /* Preisbereich */
 .LEPreisContainer {
     display: flex;
     align-items: flex-end;
-    margin-top: 20px;
+    margin-top: 60px;
     margin-left: 20px;
     margin-right: 20px;
 }
@@ -1022,12 +1033,15 @@ body {
     margin: 4px 0;
     margin-left: 40px;
     margin-right: 40px;
+    margin-top: 20px;
+    margin-bottom: 5px;
 }
 
 /* Beschreibung */
 .LEBeschreibung {
     font-family: "EB Garamond", serif;
-    font-size: 16px;
+    font-style: italic;
+    font-size: 12px;
     color: #242222;
     margin-bottom: 20px;
 }
@@ -1057,10 +1071,18 @@ body {
 /* Größere Textbreite ab 1025px */
 @media (min-width: 1025px) {
     .EfMÜberschrift {
-        margin-top: 40px;
+        margin-top: 60px;
     }
     .LEText {
         max-width: 600px;
+    }
+
+    .LEText2 {
+        font-family: "EB Garamond", serif;
+        font-size: 16px;
+        color: #242222;
+        max-width: 375px;
+        margin-top: 10px;   
     }
 
     .LELinie {

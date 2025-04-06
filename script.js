@@ -376,12 +376,4 @@ document.addEventListener("DOMContentLoaded", function () {
 
     //---------------------------------------
 
-    // Event-Listener für den Button "JETZT BESTELLEN"
-    document.querySelector(".LEBestellen").addEventListener("click", function() {
-        // Hier wird das Produkt3 zum Warenkorb hinzugefügt
-        hinzufuegenZumWarenkorb("Produkt3");
-    });
-
-    updateWarenkorbBadge(); // Badge aktualisieren
-
 });
