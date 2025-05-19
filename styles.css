@@ -157,7 +157,7 @@ body {
     background-color: #242222;
     transform: translateY(-100%); /* Menü ist standardmäßig außerhalb des Bildschirms (nach oben verschoben) */
     transition: transform 0.3s ease-in-out;
-    z-index: 99; /* Standard z-index */
+    z-index: 162; /* Standard z-index */
     padding-top: 50px;
 }
 
@@ -261,7 +261,7 @@ body {
 /* Stil für das Menü, wenn es geöffnet ist */
 #side-menu.open {
     transform: translateY(0); /* Menü kommt von oben nach unten ins Sichtfeld */
-    z-index: 100; /* Menü wird über alles andere gelegt */
+    z-index: 160; /* Menü wird über alles andere gelegt */
 }
 
 /*------------ BILDER KARUSSELL1 ------------*/
@@ -1285,7 +1285,7 @@ body {
     opacity: 0;
     visibility: hidden;
     transition: opacity 0.3s ease-in-out, visibility 0.3s;
-    z-index: 150;
+    z-index: 140;
     transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
     transform-origin: center;
 }
@@ -1294,7 +1294,7 @@ body {
 #scrollUpBtn img {
     width: 70%;
     height: 70%;
-    z-index: 151;
+    z-index: 142;
 }
 
 /* Button sichtbar */
