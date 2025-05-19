@@ -376,4 +376,59 @@ document.addEventListener("DOMContentLoaded", function () {
 
     //---------------------------------------
 
+    const testimonials = [
+        {
+          name: "Lena",
+          role: "Studentin",
+          flavor: "Camélia Boost",
+          stars: 5,
+          review: "Perfekt zum konzentrierten Lernen. Ich fühl mich danach wach – aber nicht nervös.",
+          img: "https://randomuser.me/api/portraits/women/63.jpg"
+        },
+        {
+          name: "Cannis",
+          role: "Gamer",
+          flavor: "Oud Charge",
+          stars: 4,
+          review: "Guter Kick ohne Crash. Passt super zu langen Gaming-Sessions.",
+          img: "https://randomuser.me/api/portraits/men/2.jpg"
+        },
+        {
+          name: "Timon",
+          role: "Streamer",
+          flavor: "Provence Energy",
+          stars: 4,
+          review: "Ich liebe das Design und den Geschmack. Die Zuschauer fordern schon nach einer Koop mit Sakuraya :D",
+          img: "https://randomuser.me/api/portraits/men/3.jpg"
+        },
+        {
+          name: "Julian",
+          role: "Kellner & Mixologe",
+          flavor: "Zestador",
+          stars: 3,
+          review: "Ein Traum für Cocktails! Meine Gäste lieben die Kombination aus Geschmack und Ethik. Bitte mehr Drinks zum mischen!",
+          img: "https://randomuser.me/api/portraits/men/40.jpg"
+        }
+      ];
+      
+      const grid = document.getElementById("testimonialGrid");
+      
+      testimonials.forEach(person => {
+        const card = document.createElement("div");
+        card.className = "testimonial-card";
+      
+        const stars = "★".repeat(person.stars) + "☆".repeat(5 - person.stars);
+      
+        card.innerHTML = `
+          <img src="${person.img}" alt="${person.name}" class="profile-pic" />
+          <div class="name">${person.name}</div>
+          <div class="role">${person.role}</div>
+          <div class="stars">${stars}</div>
+          <div class="review">„${person.review}“</div>
+          <div class="flavor"><strong>${person.flavor}</strong></div>
+        `;
+      
+        grid.appendChild(card);
+      });
+      
 });
