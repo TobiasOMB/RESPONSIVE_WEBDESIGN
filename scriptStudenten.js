@@ -402,7 +402,7 @@ document.addEventListener("DOMContentLoaded", function () {
           img: "https://randomuser.me/api/portraits/men/6.jpg"
         },
         {
-          name: "Julius",
+          name: "Justin",
           role: "BWL Student",
           flavor: "Zestador",
           stars: 3,
